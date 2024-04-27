@@ -286,7 +286,7 @@ a{
         font-size: 40px;
     }
     .home{
-        background-image: url('../assets/rings.jpg');
+        background-image: url('./assets/rings.jpg');
         background-size: cover;
         height: 100%;
         background-repeat: no-repeat;
