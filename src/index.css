@@ -211,7 +211,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/rings.jpg');
+    background-image: url('./assets/rings.jpg');
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
