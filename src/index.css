@@ -1,0 +1,346 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+.searchInput{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    height: 2rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.searchInput:focus{
+    border: 1px solid lightgrey;
+}
+.sidebar{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.bg-dark{
+    color:#fff;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.cardbottom{
+    align-self: bottom;
+}
+.icon{
+    height: 2rem;
+}
+
+.category-text{
+    text-transform: capitalize;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    height: 20rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+.addbtn{
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+}
+.addbtn:hover{
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+}
+.root{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr;
+}
+.cartsidebar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0; 
+    right: 0; 
+    width: 65px; 
+    height: 65px; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%; 
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.allproductscontent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+    overflow-y: auto;
+    height: calc(100vh - 55px); /* Adjust values as needed */
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allproductscontent::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+
+.allproductscontent::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+.allproductscontent::-webkit-scrollbar-thumb {
+    background-color: rgb(74, 74, 77);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.cartcard{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    width: 50rem;
+    border-radius: 20px;
+    padding: 5px;
+}
+.cartsidebar{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.cartcount{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    height: 15px;
+}
+.btn{
+    background-color: #fff;
+    border: none;
+    font-size: 25px;
+}
+.cartItemBottom{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline-start: 0;
+}
+a{
+    padding: 5px
+}
+
+.checkoutbtn{
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px;
+}
+.choices{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.homeimage{
+    border-radius: 20px;
+}
+.gallery{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery img{
+    display: block;
+    height: 95vh;
+    margin: 10px;
+}
+.overlay{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #ffffff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/rings.jpg');
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.emptycart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkoutbtn{
+    font-size: 22px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+@media screen and (max-width: 667px) {
+    .allproductscontent{
+        height: calc(100vh - 130px);
+    }
+    .root{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        display: flex;
+    }
+    .searchInput{
+        border: 1px solid lightgrey;
+        width: 100%;
+        border-radius: 5px;
+        height: 2.5rem;
+        margin: 5px;
+    }
+    .card{
+        padding: 5px;
+    }
+    .allproductscontent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .logo{
+        display: none;
+    }
+    .links{
+       display: flex;
+       justify-content: center;
+       flex-direction: row;
+    }
+    .cartsidebar{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0; 
+        right: 0; 
+
+    }
+    .choices{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .home-link{
+        width: 80%;
+        background-color: #fff;
+        color: #000;
+    }
+    .welcome-heading{
+        font-size: 40px;
+    }
+    .home{
+        background-image: url('../assets/rings.jpg');
+        background-size: cover;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cartcard{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        width: 90%;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    .cart{
+        overflow-y: scroll;
+    }
+}
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+    .searchInput{
+        width: 100%;
+    }
+    .logo{
+        display: none;
+    }
+    .root{
+        display: flex;
+        flex-direction: column;
+    }
+    .links{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+     }
+    .cartsidebar{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0; 
+        right: 0; 
+        width: 65px; 
+        height: 65px; 
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%; 
+
+    }
+    .cartcard{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        width: 75%;
+        border-radius: 20px;
+        padding: 5px;
+    }
+}
