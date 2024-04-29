@@ -206,7 +206,7 @@ function Products(){
           <div className='allproductscontent'>
               { search.length == 0 ? products.map(product =>
                   <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={getImageUrl(product.imageUrl)} price={product.price} category={product.category}/>
-              ) : displayProducts.map(product => <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={getImageUrl(product.image)} price={product.price} category={product.category}/>
+              ) : displayProducts.map(product => <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={getImageUrl(product.imageUrl)} price={product.price} category={product.category}/>
               )}
           </div>}
       </div>
