@@ -100,7 +100,7 @@ function Cart(){
           {cartItems.map(item => 
               <CartItem key={item.id} item={item} removeItem={handleRemoveItem} getCost={handleCountChange}/>
           )}
-              <p>Your total is ${totalCost.toFixed(2)}</p>
+              <p>Your total is shs. {totalCost}</p>
               <button className="bg-dark checkoutbtn">Check out!</button>
       </div>
       :
@@ -139,7 +139,7 @@ const CartItem = ({item, removeItem, getCost})=>{
 
   return(
       <div className="cartcard">
-          <p className="productprice">${item.price}</p>
+          <p className="productprice">shs. {item.price}</p>
           <img style={{width:'100px'}} src={item.imageUrl}/>
           <p>{item.title}</p>
           <div className="cartItemBottom">
@@ -166,7 +166,7 @@ function ProductCard({id, title, imageUrl, price}){
   return(
       <div className="card">
           <p className="bg-dark">shs. {price}</p>
-          <img style={{width:'100px'}} src={getImageUrl(imageUrl)} alt={title}/>
+          <img style={{width:'100px'}} src={imageUrl} alt={title}/>
           <p>{title}</p>
           <div className="cardbottom">
               <button className="addbtn" onClick={()=>handleClick(title, price)}>Add to Cart</button>
@@ -205,8 +205,8 @@ function Products(){
           : 
           <div className='allproductscontent'>
               { search.length == 0 ? products.map(product =>
-                  <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={product.imageUrl} price={product.price} category={product.category}/>
-              ) : displayProducts.map(product => <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={product.image} price={product.price} category={product.category}/>
+                  <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={getImageUrl(product.imageUrl)} price={product.price} category={product.category}/>
+              ) : displayProducts.map(product => <ProductCard key={product.id} id={product.id} title={product.title} imageUrl={getImageUrl(product.image)} price={product.price} category={product.category}/>
               )}
           </div>}
       </div>
